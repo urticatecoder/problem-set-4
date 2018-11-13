@@ -95,7 +95,15 @@ function inches() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
-  
+  var miles = Math.floor(input / 63360);
+  var milesRemainder = input % 63360;
+  var yards = Math.floor(milesRemainder / 36);
+  var yardsRemainder = milesRemainder % 36;
+  var feet = Math.floor(yardsRemainder / 12);
+  var feetRemainder = yardsRemainder % 12;
+  var print = document.getElementById("output5");
+  print.innerHTML = "Miles: " + miles + document.createElement("br") + "Yards: " + yards + document.createElement("br") + "Feet: " + feet + document.createElement("br") + "Inches: " + feetRemainder;
+
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
