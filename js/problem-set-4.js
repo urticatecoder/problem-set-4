@@ -4,7 +4,7 @@
 
 function hello() {
   // WRITE YOUR EXERCISE 1 CODE HERE
-  var hello = document.getElementById('output1');
+  let hello = document.getElementById('output1');
   hello.innerHTML = "Hello, AP Computer Science Principles!";
 
   ////////////////// DO NOT MODIFY
@@ -18,13 +18,13 @@ function hello() {
 
 function helloAgain() {
 
-  //////////// DO NOT MODIFY      Use the @name variable to store
+  //////////// DO NOT MODIFY      Use the @name letiable to store
   let name; // DO NOT MODIFY      the value that the user enters
   //////////// DO NOT MODIFY      in response to your prompt.
 
   // WRITE YOUR EXERCISE 2 CODE HERE
   name = prompt("Please input your name:");
-  var helloAgain = document.getElementById("output2");
+  let helloAgain = document.getElementById("output2");
   helloAgain.innerHTML = "Hello, " + name + "!";
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
@@ -45,8 +45,8 @@ function celsius() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-  var fahr = ((cels * 1.8) + 32).toFixed(2);
-  var celsius = document.getElementById("output3");
+  let fahr = ((cels * 1.8) + 32).toFixed(2);
+  let celsius = document.getElementById("output3");
   celsius.innerHTML = cels + " degrees Celsius equals " + fahr + " degrees Fahrenheit.";
 
   ////////////////////////// DO NOT MODIFY
@@ -68,8 +68,8 @@ function fahrenheit() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 4 CODE HERE
-  var cels = ((fahr - 32) * (5 / 9)).toFixed(2);
-  var fahrenheit = document.getElementById("output4");
+  let cels = ((fahr - 32) * (5 / 9)).toFixed(2);
+  let fahrenheit = document.getElementById("output4");
   fahrenheit.innerHTML = fahr + " degrees Fahrenheit equals " + cels + " degrees Celsius.";
 
   ///////////////////////////// DO NOT MODIFY
@@ -95,13 +95,13 @@ function inches() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
-  var miles = Math.floor(input / 63360);
-  var milesRemainder = input % 63360;
-  var yards = Math.floor(milesRemainder / 36);
-  var yardsRemainder = milesRemainder % 36;
-  var feet = Math.floor(yardsRemainder / 12);
-  var feetRemainder = yardsRemainder % 12;
-  var print = document.getElementById("output5");
+  let miles = Math.floor(input / 63360);
+  let milesRemainder = input % 63360;
+  let yards = Math.floor(milesRemainder / 36);
+  let yardsRemainder = milesRemainder % 36;
+  let feet = Math.floor(yardsRemainder / 12);
+  let feetRemainder = yardsRemainder % 12;
+  let print = document.getElementById("output5");
   print.innerHTML = "Miles: " + miles + "<br/>" + "Yards: " + yards + "<br/>" + "Feet: "  + feet + "<br/>" + "Inches: " + feetRemainder;
 
   ////////////////////////// DO NOT MODIFY
@@ -127,11 +127,11 @@ function centimeters() {
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 6 CODE HERE
-  var kilometers = Math.floor(input / 100000);
-  var kilometersRemainder = input % 100000;
-  var meters = Math.floor (kilometersRemainder / 100);
-  var metersRemainder = kilometersRemainder % 100;
-  var print = document.getElementById("output6");
+  let kilometers = Math.floor(input / 100000);
+  let kilometersRemainder = input % 100000;
+  let meters = Math.floor (kilometersRemainder / 100);
+  let metersRemainder = kilometersRemainder % 100;
+  let print = document.getElementById("output6");
   print.innerHTML = "Kilometers: " + kilometers + "<br/>" + "Meters: " + meters + "<br/>" + "Centimeters: " + metersRemainder;
 
   /////////////////////////////// DO NOT MODIFY
@@ -157,6 +157,16 @@ function fluidOunces() {
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 7 CODE HERE
+  let gallons = Math.floor(input / 128);
+  let gallonsRemainder = input % 128;
+  let quarts = Math.floor(gallonsRemainder / 32);
+  let quartsRemainder = gallonsRemainder % 32;
+  let pints = Math.floor(quartsRemainder / 16);
+  let pintsRemainder = quartsRemainder % 16;
+  let cups = Math.floor(pintsRemainder / 8);
+  let cupsRemainder = pintsRemainder % 8;
+  let print = document.getElementById("output7");
+  print.innerHTML = "Gallons: " + gallons + "<br/>" + "Quarts: " + quarts + "<br/>" + "Pints: " + pints + "<br/>" + "Cups: " + cups + "<br/>" + "Fluid Ounces: " + cupsRemainder;
 
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
@@ -181,6 +191,12 @@ function ounces() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 8 CODE HERE
+  let tons = Math.floor(ounces / 32000);
+  let tonsRemainder = ounces % 32000;
+  let pounds = Math.floor(tonsRemainder / 16);
+  let poundsRemainder = tonsRemainder % 16;
+  let print = document.getElementById("output8");
+  print.innerHTML = "Tons: " + tons + "<br/>" + "Pounds: " + pounds + "<br/>" + "Ounces: " + poundsRemainder;
 
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
