@@ -221,6 +221,15 @@ function money() {
   /////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 9 CODE HERE
+  let bills100 = Math.floor(pennies / 10000);
+  let bills100Remainder = pennies % 100000;
+  let bills50 = Math.floor(bills100Remainder / 5000);
+  let bills50Remainder = bills100Remainder % 5000;
+  let bills20 = Math.floor(bills50Remainder / 2000);
+  let bills20Remainder = bills50Remainder % 2000;
+  let bills10 = Math.floor(bills20Remainder / 1000);
+  let bills10Remainder = bills20Remainder % 1000;
+  
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
