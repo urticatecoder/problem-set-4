@@ -221,15 +221,16 @@ function money() {
   /////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 9 CODE HERE
-  let bills100 = Math.floor(pennies / 10000);
-  let bills100Remainder = pennies % 100000;
-  let bills50 = Math.floor(bills100Remainder / 5000);
-  let bills50Remainder = bills100Remainder % 5000;
-  let bills20 = Math.floor(bills50Remainder / 2000);
-  let bills20Remainder = bills50Remainder % 2000;
-  let bills10 = Math.floor(bills20Remainder / 1000);
-  let bills10Remainder = bills20Remainder % 1000;
-  
+  let dollars = Math.floor(pennies / 100);
+  let dollarsRemainder = pennies % 100;
+  let quarters = Math.floor(dollarsRemainder / 25);
+  let quartersRemainder = dollarsRemainder % 25;
+  let dimes = Math.floor(quartersRemainder / 10);
+  let dimesRemainder = quartersRemainder % 10;
+  let nickels = Math.floor(dimesRemainder / 5);
+  let nickelsRemainder = dimesRemainder % 5;
+  let print = document.getElementById("output9");
+  print.innerHTML = "Dollars: " + dollars + "<br/>" + "Quarters: " + quarters + "<br/>" + "Dimes: " + dimes + "<br/>" + "Nickels: " + nickels + "<br/>" + "Pennies: " + nickelsRemainder;
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
@@ -254,6 +255,15 @@ function change() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 10 CODE HERE
+  let quarters = Math.floor(amount / .25);
+  let quartersRemainder = amount % .25;
+  let dimes = Math.floor(quartersRemainder / .10);
+  let dimesRemainder = quartersRemainder % .10;
+  let nickels = Math.floor(dimesRemainder / .05);
+  let nickelsRemainder = dimesRemainder % .05;
+  let pennies = nickelsRemainder / .01;
+  let print = document.getElementById("output10");
+  print.innerHTML = Math.round(quarters + dimes + nickels + pennies) + " coins.";
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
