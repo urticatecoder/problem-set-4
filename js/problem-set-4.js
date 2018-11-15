@@ -265,6 +265,33 @@ function change() {
   let print = document.getElementById("output10");
   print.innerHTML = Math.round(quarters + dimes + nickels + pennies) + " coins.";
 
+
+  /*let quarters = 0;
+  let dimes = 0;
+  let nickels = 0;
+  let pennies = 0;
+
+  while (amount > 0){
+    if (amount > .25){
+      let quarters = quarters + Math.floor(amount / .25);
+      let amount = amount - quarters * .25;
+
+    } else if (amount > .1){
+      let dimes = dimes + Math.floor(amount / .1);
+      let amount = amount - dimes * .1;
+
+    } else if (amount > .05){
+      let nickels = nickels + Math.floor(amount / .05);
+      let amount = amount - nickels * .05;
+
+    } else (amount > .01){
+      let pennies = pennies + Math.floor(amount / .01);
+      let amount = amount - pennies * .01;
+    }
+  }
+    let print = document.getElementById("output10");
+    print.innerHTML = quarters + dimes + nickels + pennies + " coins.";*/
+
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
